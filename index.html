@@ -779,7 +779,7 @@ for (type in 1:9) {
   outliers <- data_vector[data_vector < lower_bound | data_vector > upper_bound]
   
   # 4. Store results
-  outlier_results[[paste0("Type ", type)]]] <- list(
+  outlier_results[[paste0("Type ", type)]] <- list(
     Q1 = qnt[1],
     Q3 = qnt[2],
     IQR = IQR,
