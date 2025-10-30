@@ -145,7 +145,7 @@
                     <button data-type="9" class="type-btn p-2 text-sm font-semibold rounded active" title="Type 9 (SPSS/SAS Default)">9</button>
                 </div>
                 <p class="text-xs text-gray-700 mt-2 text-center">
-                    <span class="font-bold">$\text{\textbf{Drag to select/deselect!}}$</span> Clicking and dragging toggles state on hover.
+                    <span class="font-bold">Drag to select/deselect!</span> Clicking and dragging toggles state on hover.
                 </p>
             </div>
         </div>
@@ -230,13 +230,13 @@
                     <span class="text-orange-600 font-bold text-lg">$m$</span>: <span class="text-gray-700">The offset constant.</span>
                 </div>
                 <div class="border-b pb-2 symbol-key">
-                    <span class="text-orange-600 font-bold text-lg">$\mathbb{Z}$</span>: <span class="text-gray-700">The set of all $\text{\textbf{Integers}}$ ($\dots, -2, -1, 0, 1, 2, \dots$).</span>
+                    <span class="text-orange-600 font-bold text-lg">$\mathbb{Z}$</span>: <span class="text-gray-700">The set of all Integers ($\dots, -2, -1, 0, 1, 2, \dots$).</span>
                 </div>
                 <div class="border-b pb-2 symbol-key">
-                    <span class="text-orange-600 font-bold text-lg">$\in$</span>: <span class="text-gray-700">Symbol for $\text{\textbf{"is an element of"}}$ or $\text{\textbf{"belongs to"}}$.</span>
+                    <span class="text-orange-600 font-bold text-lg">$\in$</span>: <span class="text-gray-700">Symbol for "is an element of" or "belongs to".</span>
                 </div>
                 <div class="border-b pb-2 symbol-key">
-                    <span class="text-orange-600 font-bold text-lg">$\notin$</span>: <span class="text-gray-700">Symbol for $\text{\textbf{"is NOT an element of"}}$ or $\text{\textbf{"does NOT belong to"}}$.</span>
+                    <span class="text-orange-600 font-bold text-lg">$\notin$</span>: <span class="text-gray-700">Symbol for "is NOT an element of" or "does NOT belong to".</span>
                 </div>
             </div>
 
@@ -244,7 +244,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 1</p>
-                    <p>The inverse of the empirical distribution function. $p \approx k/n$.</p>
+                    <p>The inverse of the empirical distribution function.</p>
                     <div class="formula-box">
                         $$j = np$$
                         $$Q_p = x(\lceil j \rceil)$$
@@ -253,7 +253,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 2</p>
-                    <p>Similar to Type 1, but averages at discontinuities. $p \approx (k-1/2)/n$.</p>
+                    <p>Similar to Type 1, but averages at discontinuities.</p>
                     <div class="formula-box">
                         $$j = np$$
                         $$\text{If } j \in \mathbb{Z}: Q_p = \frac{x(j) + x(j+1)}{2}$$
@@ -264,7 +264,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 3</p>
-                    <p>SAS definition: nearest even order statistic. $p \approx k/(n+1)$ (for odd $k$) or $p \approx (k-1)/(n+1)$ (for even $k)$.</p>
+                    <p>SAS definition: nearest even order statistic.</p>
                     <div class="formula-box">
                         $$j = \lfloor np - 1/2 \rfloor$$
                         $$\text{If } (np-1/2) \in \mathbb{Z} \text{ and } j \text{ is even, } Q_p = x(j);$$ 
@@ -275,7 +275,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 4</p>
-                    <p>Linear interpolation of the empirical CDF. $p_k = k/n$.</p>
+                    <p>Linear interpolation of the empirical cumulative distribution function (ECDF).</p>
                     <div class="formula-box">
                         $$j = np$$
                         $$Q_p = (1 - g) x(i) + g x(i+1)$$
@@ -284,7 +284,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 5 (Default in Stata: $m=1/2$)</p>
-                    <p>A piecewise linear function where the knots are the values midway between the steps. $p_k = (k-1/2)/n$.</p>
+                    <p>A piecewise linear function where the knots are the values midway between the steps.</p>
                     <div class="formula-box">
                         $$j = np + 1/2$$
                         $$Q_p = (1 - g) x(i) + g x(i+1)$$
@@ -293,7 +293,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 6 (Default in Minitab: $m=0$)</p>
-                    <p>Index $j = (n+1)p$. This is $p_k \approx E[F(X_k)]$.</p>
+                    <p>Index $j = (n+1)p$.</p>
                     <div class="formula-box">
                         $$j = (n+1)p$$
                         $$Q_p = (1 - g) x(i) + g x(i+1)$$
@@ -302,7 +302,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 7 (Default in Excel and R: $m=1$)</p>
-                    <p>Piecewise linear function. $p_k \approx \text{mode}[F(X_k)]$.</p>
+                    <p>Piecewise linear function.</p>
                     <div class="formula-box">
                         $$j = (n-1)p + 1$$
                         $$Q_p = (1 - g) x(i) + g x(i+1)$$
@@ -311,7 +311,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 8 ($m=1/3$)</p>
-                    <p>Approximation of expected order statistic (Normal). $p_k \approx \text{median}[F(X_k)]$. The resulting quantile estimates are approximately median-unbiased regardless of the distribution of x.</p>
+                    <p>Approximation of expected order statistic (Normal). The resulting quantile estimates are approximately median-unbiased regardless of the distribution of x.</p>
                     <div class="formula-box">
                         $$j = \left(n + 1/3\right) p + 1/3$$
                         $$Q_p = (1 - g) x(i) + g x(i+1)$$
@@ -320,7 +320,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 9 ($m=3/8$)</p>
-                    <p>Approximation of expected order statistic (Uniform). $p_k = (k-3/8)/(n+1/4)$.</p>
+                    <p>Approximation of expected order statistic (Uniform).</p>
                     <div class="formula-box">
                         $$j = \left(n + \frac{1}{4}\right) p + \frac{3}{8}$$
                         $$Q_p = (1 - g) x(i) + g x(i+1)$$
