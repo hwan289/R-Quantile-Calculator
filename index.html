@@ -128,7 +128,7 @@
                 <label for="data-input" class="block text-base font-semibold text-gray-700 mb-2">Enter Data (Comma- or Space-separated numbers):</label>
                 <textarea id="data-input" rows="3" class="w-full border-gray-300 rounded-lg shadow-inner p-3 focus:ring-blue-500 focus:border-blue-500 font-mono text-sm">2, 5, 8, 12, 15, 18, 22, 25, 28, 30</textarea>
                 <p class="text-xs text-gray-500 mt-2">
-                    <span class="font-bold">Note:</span> Non-numeric values are ignored. Calculations are performed on the sorted, cleaned data set.
+                    <span class="font-bold">$\text{\textbf{Note}}$:</span> Non-numeric values are ignored. Calculations are performed on the sorted, cleaned data set.
                 </p>
             </div>
             <div class="md:col-span-1">
@@ -145,7 +145,7 @@
                     <button data-type="9" class="type-btn p-2 text-sm font-semibold rounded active" title="Type 9 (SPSS/SAS Default)">9</button>
                 </div>
                 <p class="text-xs text-gray-700 mt-2 text-center">
-                    <span class="font-bold">Drag to select/deselect!</span> Clicking and dragging toggles state on hover.
+                    <span class="font-bold">$\text{\textbf{Drag to select/deselect!}}$</span> Clicking and dragging toggles state on hover.
                 </p>
             </div>
         </div>
@@ -230,13 +230,13 @@
                     <span class="text-orange-600 font-bold text-lg">$m$</span>: <span class="text-gray-700">The offset constant.</span>
                 </div>
                 <div class="border-b pb-2 symbol-key">
-                    <span class="text-orange-600 font-bold text-lg">$\mathbb{Z}$</span>: <span class="text-gray-700">The set of all Integers ($\dots, -2, -1, 0, 1, 2, \dots$).</span>
+                    <span class="text-orange-600 font-bold text-lg">$\mathbb{Z}$</span>: <span class="text-gray-700">The set of all $\text{\textbf{Integers}}$ ($\dots, -2, -1, 0, 1, 2, \dots$).</span>
                 </div>
                 <div class="border-b pb-2 symbol-key">
-                    <span class="text-orange-600 font-bold text-lg">$\in$</span>: <span class="text-gray-700">Symbol for "is an element of" or "belongs to".</span>
+                    <span class="text-orange-600 font-bold text-lg">$\in$</span>: <span class="text-gray-700">Symbol for $\text{\textbf{"is an element of"}}$ or $\text{\textbf{"belongs to"}}$.</span>
                 </div>
                 <div class="border-b pb-2 symbol-key">
-                    <span class="text-orange-600 font-bold text-lg">$\notin$</span>: <span class="text-gray-700">Symbol for "is NOT an element of" or "does NOT belong to".</span>
+                    <span class="text-orange-600 font-bold text-lg">$\notin$</span>: <span class="text-gray-700">Symbol for $\text{\textbf{"is NOT an element of"}}$ or $\text{\textbf{"does NOT belong to"}}$.</span>
                 </div>
             </div>
 
@@ -244,7 +244,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 1</p>
-                    <p>The inverse of the empirical distribution function.</p>
+                    <p>The inverse of the empirical distribution function. $p \approx k/n$.</p>
                     <div class="formula-box">
                         $$j = np$$
                         $$Q_p = x(\lceil j \rceil)$$
@@ -253,7 +253,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 2</p>
-                    <p>Similar to Type 1, but averages at discontinuities.</p>
+                    <p>Similar to Type 1, but averages at discontinuities. $p \approx (k-1/2)/n$.</p>
                     <div class="formula-box">
                         $$j = np$$
                         $$\text{If } j \in \mathbb{Z}: Q_p = \frac{x(j) + x(j+1)}{2}$$
@@ -264,7 +264,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 3</p>
-                    <p>SAS definition: nearest even order statistic.</p>
+                    <p>SAS definition: nearest even order statistic. $p \approx k/(n+1)$ (for odd $k$) or $p \approx (k-1)/(n+1)$ (for even $k)$.</p>
                     <div class="formula-box">
                         $$j = \lfloor np - 1/2 \rfloor$$
                         $$\text{If } (np-1/2) \in \mathbb{Z} \text{ and } j \text{ is even, } Q_p = x(j);$$ 
@@ -275,7 +275,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 4</p>
-                    <p>Linear interpolation of the empirical cumulative distribution function (ECDF).</p>
+                    <p>Linear interpolation of the empirical CDF. $p_k = k/n$.</p>
                     <div class="formula-box">
                         $$j = np$$
                         $$Q_p = (1 - g) x(i) + g x(i+1)$$
@@ -284,7 +284,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 5 (Default in Stata: $m=1/2$)</p>
-                    <p>A piecewise linear function where the knots are the values midway between the steps.</p>
+                    <p>A piecewise linear function where the knots are the values midway between the steps. $p_k = (k-1/2)/n$.</p>
                     <div class="formula-box">
                         $$j = np + 1/2$$
                         $$Q_p = (1 - g) x(i) + g x(i+1)$$
@@ -293,7 +293,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 6 (Default in Minitab: $m=0$)</p>
-                    <p>Index $j = (n+1)p$.</p>
+                    <p>Index $j = (n+1)p$. This is $p_k \approx E[F(X_k)]$.</p>
                     <div class="formula-box">
                         $$j = (n+1)p$$
                         $$Q_p = (1 - g) x(i) + g x(i+1)$$
@@ -302,7 +302,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 7 (Default in Excel and R: $m=1$)</p>
-                    <p>Piecewise linear function.</p>
+                    <p>Piecewise linear function. $p_k \approx \text{mode}[F(X_k)]$.</p>
                     <div class="formula-box">
                         $$j = (n-1)p + 1$$
                         $$Q_p = (1 - g) x(i) + g x(i+1)$$
@@ -311,7 +311,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 8 ($m=1/3$)</p>
-                    <p>Approximation of expected order statistic (Normal). The resulting quantile estimates are approximately median-unbiased regardless of the distribution of x.</p>
+                    <p>Approximation of expected order statistic (Normal). $p_k \approx \text{median}[F(X_k)]$. The resulting quantile estimates are approximately median-unbiased regardless of the distribution of x.</p>
                     <div class="formula-box">
                         $$j = \left(n + 1/3\right) p + 1/3$$
                         $$Q_p = (1 - g) x(i) + g x(i+1)$$
@@ -320,7 +320,7 @@
                 
                 <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <p class="font-bold text-blue-700 mb-1">Type 9 ($m=3/8$)</p>
-                    <p>Approximation of expected order statistic (Uniform).</p>
+                    <p>Approximation of expected order statistic (Uniform). $p_k = (k-3/8)/(n+1/4)$.</p>
                     <div class="formula-box">
                         $$j = \left(n + \frac{1}{4}\right) p + \frac{3}{8}$$
                         $$Q_p = (1 - g) x(i) + g x(i+1)$$
@@ -363,6 +363,7 @@
         let isDragging = false; // Global state for drag interaction
         let showOutliers = false; // Global state for the outlier toggle
         let debounceTimer; // GLOBAL: Debounce timer for the toggle switch
+        let cardTimers = []; // GLOBAL: Array to store all setTimeout IDs for card creation (FIX: Disorganization issue)
 
         /**
          * Standard debounce utility function.
@@ -692,6 +693,10 @@
             initialDataInputCount = 0; // NEW: Reset count
             hideCopyButtons();
 
+            // FIX: Clear pending timers when clearing data
+            cardTimers.forEach(timer => clearTimeout(timer));
+            cardTimers = [];
+
             copyToClipboard("", "Data and Results Cleared!");
         }
 
@@ -987,6 +992,12 @@ for (name in names(outlier_results)) {
             const containerElement = document.getElementById('results-container');
             const runButton = document.getElementById('run-button');
             
+            runButton.disabled = true; // Disable immediately
+            
+            // FIX: Clear any pending card creation timers from previous runs
+            cardTimers.forEach(timer => clearTimeout(timer));
+            cardTimers = []; // Reset the array
+            
             // 1. Trigger Animation Feedback ONLY HERE (Single Flash)
             if (!isRerunning) {
                 containerElement.classList.add('flash-border-green');
@@ -1026,11 +1037,13 @@ for (name in names(outlier_results)) {
             if (uniqueSortedTypes.length === 0) {
                 containerElement.innerHTML = '<p class="text-red-600 text-center py-4 font-semibold">Error: Please select at least one Quantile Type (1-9).</p>';
                 hideCopyButtons();
+                runButton.disabled = false;
                 return;
             }
             if (dataArray.length === 0) {
                 containerElement.innerHTML = '<p class="text-red-600 text-center py-4 font-semibold">Error: Please enter valid comma- or space-separated numbers for data.</p>';
                 hideCopyButtons();
+                runButton.disabled = false;
                 return;
             }
 
@@ -1038,7 +1051,6 @@ for (name in names(outlier_results)) {
             const dataMax = dataArray[dataArray.length - 1];
 
             // 5. Setup and Clear
-            runButton.disabled = true;
             hideCopyButtons(); // Hide while running calculations
             
             // FIX: Clear the container *completely* before adding new content
@@ -1074,7 +1086,8 @@ for (name in names(outlier_results)) {
 
                 simulationResults.push({ type: type, values: values, outlier: outlierAnalysis });
 
-                setTimeout(() => {
+                // Store the timer ID for later cancellation
+                const timerId = setTimeout(() => {
                     createResultCard(type, values, outlierAnalysis);
                     
                     if (index === totalTypes - 1) {
@@ -1082,6 +1095,8 @@ for (name in names(outlier_results)) {
                         showCopyButtons(); // Show buttons only after all are calculated
                     }
                 }, delay);
+
+                cardTimers.push(timerId); // NEW: Add timer to the global list
 
                 delay += stepDelay;
             });
